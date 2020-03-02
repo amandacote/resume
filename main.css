@@ -1,0 +1,139 @@
+*{
+    /* outline: 2px dashed green; */
+    margin: 0;
+    padding:0;
+}
+/* @media screen and (max-width: 500px) {
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "q"
+        "h"
+        "e"
+        "b"
+        "f";
+}
+ */
+/* step one - build your grid */
+.container {
+    padding:10%;
+    /* height: 50%; */
+    display: grid;
+    grid-gap: 10px;
+    /* this will be  the same for everyone */
+    grid-template-columns: repeat(12, 1fr);
+    /* this will be customized, based on your grid, use pixels or % */
+    grid-template-rows: 20%;
+    /* use letters from step 2 to build the grid */
+    grid-template-areas: 
+        "h h h h h h h q q q q q"
+        "b b b b e e e e a a a a"
+        "b b b b e e e e a a a a"
+        "f f f f f f f f f f f f";
+}
+li{
+    font-weight: 20;
+    padding:10px;
+}
+
+.date{
+    font-weight: .2em;
+}
+body{
+    background-color: mediumpurple;
+    font-size: .6em;
+    font-family: 'verdana'
+     
+}
+
+ul{
+    list-style: none;
+}
+
+
+h1{
+    font-size: 5em;
+    font-family: 'futura'
+}
+
+h2{
+    padding-top:25px;
+}
+
+h3{
+    padding-top:45px;
+}
+
+
+/* step three - build a grid that becomes active when the pixels are 800px or less */
+@media screen and (max-width: 100px max-height: px) {
+
+    .container{
+        display: grid;
+        grid-gap: 1em;
+        /* grid is only one column, keep this way */
+        grid-template-columns: 1fr;
+        /* you can enter values, or auto will adjust the box sizes based on content */
+        grid-template-rows: 
+        grid-template-areas:
+        "q"
+        "h"
+        "b"
+        "a"
+        "e"
+        "f";
+    }
+}
+
+/* step 1 - assign each of your sections a letter */
+blockquote {
+    grid-area: q;
+    font-weight:20;
+    font-stretch: wider;
+    font-size: 1.5em;
+    padding-bottom:.5px; padding-right:100px;
+    font-family: 'futura'
+}
+
+header {
+    grid-area: h; 
+    border:50px solid lightblue 
+   ;padding-left:80px; padding-bottom:200px;padding-top:100px 
+   
+     
+    
+    
+}
+
+.education {
+    grid-area: b;
+    padding-bottom:100px; padding-top:150px;padding-right:px
+    
+    
+}
+
+.experience {
+    grid-area: a;
+    
+    
+}
+
+.skills {
+    grid-area: a;
+    padding-right:100px;padding-top:150px
+    
+   
+
+}
+
+.footer{
+    grid-area: f;
+
+   
+    
+   
+}
